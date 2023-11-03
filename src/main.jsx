@@ -12,6 +12,7 @@ import JobDetails from './Components/Featured Job/JobDetails';
 import AppliedJobs from './Components/AppliedJob/AppliedJobs';
 import Register from './Components/Register/Register';
 import AuthProvider from './Components/AuthProvider/AuthProvider';
+import Login from './Components/Login/Login';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
       },
       {
         path: "*",
