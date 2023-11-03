@@ -3,11 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationPin, faVoicemail, faPhone, faBagShopping, faDollar } from '@fortawesome/free-solid-svg-icons'
 import { useLoaderData } from 'react-router-dom'
 import { addToDb } from '../../fakedb';
+import toast from 'react-hot-toast';
 
 const JobDetails = () => {
   const job = useLoaderData();
-  const handelAddToCart = (id) => {
-    console.log(id)
+
+  const handelAddToFavorite = (id, name) => {
+  toast.success("Apply Successful..")
+    addToDb(id, name);
   };
 
 
@@ -66,7 +69,7 @@ const JobDetails = () => {
             </div>
           </div>
           <div className='text-center'>
-            <button onClick={() => handelAddToCart(job.id)} className='border rounded-md bg-blue-500 mt-4 text-center p-2 w-full'>Apply Now</button>
+            <button onClick={() => handelAddToFavorite(job.id, job.jobTitle)} className='border rounded-md bg-blue-500 mt-4 text-center p-2 w-full'>Apply Now</button>
           </div>
         </div>
       </div>

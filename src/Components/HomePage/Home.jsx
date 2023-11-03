@@ -4,6 +4,7 @@ import JobCatagory from './JobCatagory'
 import { useLoaderData } from 'react-router-dom'
 import FeaturedJob from '../Featured Job/FeaturedJob'
 
+
 const Home = () => {
    
   return (

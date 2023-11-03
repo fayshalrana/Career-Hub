@@ -9,6 +9,7 @@ import Layout from './Layout';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import Home from './Components/HomePage/Home';
 import JobDetails from './Components/Featured Job/JobDetails';
+import AppliedJobs from './Components/AppliedJob/AppliedJobs';
 
 const router = createBrowserRouter([
   {
@@ -22,11 +23,12 @@ const router = createBrowserRouter([
       {
         path: "/job/:Id",
         element:<JobDetails></JobDetails>,
-        loader:({params}) => fetch(`http://localhost:3000/jobs/${params.Id}`),
+        loader:({params}) => fetch(`https://career-hub-server-pv4rqhpp1-fayshal-ranas-projects.vercel.app/jobs/${params.Id}`),
       },
       {
-        path: "about",
-        element: <div>This is About</div>,
+        path: "/my-jobs",
+        element: <AppliedJobs></AppliedJobs>,
+        loader: ()=> fetch('https://career-hub-server-pv4rqhpp1-fayshal-ranas-projects.vercel.app/jobs/')
       },
       {
         path: "blog",

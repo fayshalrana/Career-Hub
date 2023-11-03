@@ -9,9 +9,9 @@ const Header = () => {
           path: "/"
         },
         {
-          name: "About Us",
+          name: "Applied Jobs",
           id: 2,
-          path: "/about"
+          path: "/my-jobs"
         },
         {
           name: "Blog",
@@ -29,7 +29,7 @@ const Header = () => {
                 menus.map(menu => <Links key={menu.id} menu={menu}></Links>)
             }
         </ul>
-            <button className='font-bold bg-blue-500 text-white border  py-1 px-2 rounded-md'>Start Apply</button>
+            <button className='font-bold bg-blue-500 text-white border  py-1 px-2 rounded-md'>Login</button>
       </div>
     </div>
   )
