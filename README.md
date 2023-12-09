@@ -1,1 +1,1 @@
-Career hub Live site:
+Career hub Live site: https://career-hub365.netlify.app/
